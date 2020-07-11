@@ -1,0 +1,42 @@
+::selection {
+  background: rgba(#000, .7);
+  color: #fff;
+}
+
+::placeholder {
+  color: #666;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eaeaea;
+  font-family: 'HouschkaPro', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #2F2F2F;
+  position: relative;
+}
+
+input, textarea {
+  border: #666 1px solid;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
