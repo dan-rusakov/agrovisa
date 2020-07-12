@@ -200,4 +200,8 @@
       margin-bottom: 0;
     }
   }
+
+  .content {
+    min-height: calc(100vh - 251px);
+  }
 </style>
