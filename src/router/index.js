@@ -14,7 +14,12 @@ Vue.use(VueRouter);
     path: '/products',
     name: 'Products',
     component: () => import(/* webpackChunkName: "products" */ '../views/Products.vue')
-  }
+  },
+  {
+    path: '/logistics',
+    name: 'Logistics',
+    component: () => import(/* webpackChunkName: "logistics" */ '../views/Logistics.vue')
+  },
 ];
 
 const router = new VueRouter({
