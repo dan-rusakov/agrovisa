@@ -117,7 +117,6 @@
     width: 100%;
     padding-bottom: 100%;
     position: relative;
-    margin-bottom: 20px;
     border-radius: 1000px;
     overflow: hidden;
     display: block;
@@ -137,7 +136,12 @@
     font-weight: $semibold;
     color: $text-color;
     font-size: 22px;
-    margin: 0;
+    margin: 20px 0 0;
     text-align: center;
+
+    &--small {
+      font-size: 18px;
+      margin: 13px 0 0;
+    }
   }
 </style>

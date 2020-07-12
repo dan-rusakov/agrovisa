@@ -92,5 +92,13 @@
       display: list-item;
       list-style-position: inside;
     }
+
+    a {
+      font-family: $font-family-base;
+      font-weight: $medium;
+      font-size: 18px;
+      color: $brand-color;
+      border-bottom: 1px solid $brand-color;
+    }
   }
 </style>

@@ -20,6 +20,11 @@ Vue.use(VueRouter);
     name: 'Logistics',
     component: () => import(/* webpackChunkName: "logistics" */ '../views/Logistics.vue')
   },
+  {
+    path: '/dealers',
+    name: 'Dealers',
+    component: () => import(/* webpackChunkName: "dealers" */ '../views/Dealers.vue')
+  },
 ];
 
 const router = new VueRouter({
