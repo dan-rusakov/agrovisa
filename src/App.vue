@@ -64,14 +64,12 @@
 </template>
 
 <style lang="scss">
-  @import "./assets/css/reset";
-  @import "./assets/css/fonts";
-  @import "assets/css/base";
-  @import "assets/css/variables";
-
   .header {
     background-color: $white;
     padding: 20px 0 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
   }
 
   .header__wrapper {
@@ -172,6 +170,7 @@
     width: 100%;
     background-color: $white;
     padding: 38px 0;
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.05);
   }
 
   .footer__wrapper {
