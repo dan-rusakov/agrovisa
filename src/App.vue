@@ -9,21 +9,21 @@
           <div class="header__bottom-line">
             <ul class="header__menu">
               <li class="header__menu-item">
-                <a href="#!" class="header__menu-link">О компании</a>
+                <router-link :to="{name: 'Home', hash: '#about'}" @click.native="scrollFix('#about')" class="header__menu-link" tag="a">О компании</router-link>
               </li>
               <li class="header__menu-item">
-                <a href="#!" class="header__menu-link">Продукция</a>
+                <router-link :to="{name: 'Products'}" class="header__menu-link" tag="a">Продукция</router-link>
               </li>
               <li class="header__menu-item">
-                <a href="#!" class="header__menu-link">Логистика</a>
+                <router-link :to="{name: 'Logistics'}" class="header__menu-link" tag="a">Логистика</router-link>
               </li>
             </ul>
           </div>
         </div>
         <div class="header__content-box">
-          <a href="#!" class="header__logo-box">
+          <router-link :to="{name: 'Home'}" class="header__logo-box" tag="a">
             <img src="./assets/images/logo.png" alt="Агровиза" class="header__logo">
-          </a>
+          </router-link>
         </div>
         <div class="header__content-box">
           <div class="header__content-box">
@@ -34,13 +34,13 @@
             <div class="header__bottom-line">
               <ul class="header__menu">
                 <li class="header__menu-item">
-                  <a href="#!" class="header__menu-link">О компании</a>
+                  <router-link :to="{name: 'PriceList'}" class="header__menu-link" tag="a">Прайс-лист</router-link>
                 </li>
                 <li class="header__menu-item">
-                  <a href="#!" class="header__menu-link">Продукция</a>
+                  <router-link :to="{name: 'Dealers'}" class="header__menu-link" tag="a">Поставщикам</router-link>
                 </li>
                 <li class="header__menu-item">
-                  <a href="#!" class="header__menu-link">Логистика</a>
+                  <router-link :to="{name: 'Home', hash: '#contacts'}" @click.native="scrollFix('#contacts')" class="header__menu-link" tag="a">Контакты</router-link>
                 </li>
               </ul>
             </div>
@@ -62,6 +62,17 @@
     </footer>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'App',
+    methods: {
+      scrollFix(hashbang) {
+        location.href = hashbang;
+      }
+    }
+  }
+</script>
 
 <style lang="scss">
   .header {

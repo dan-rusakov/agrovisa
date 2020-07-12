@@ -1,5 +1,5 @@
 <template>
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Afe889829a44251fdf5eba9ab7b2329d8f0b0e494bf016dd0cf0cd0b315843ceb&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
     <div class="contacts__wrapper">
       <div class="contacts__form-box">
