@@ -25,11 +25,16 @@ Vue.use(VueRouter);
     name: 'Dealers',
     component: () => import(/* webpackChunkName: "dealers" */ '../views/Dealers.vue')
   },
-    {
-      path: '/price-list',
-      name: 'PriceList',
-      component: () => import(/* webpackChunkName: "price-list" */ '../views/PriceList.vue')
-    },
+  {
+    path: '/price-list',
+    name: 'PriceList',
+    component: () => import(/* webpackChunkName: "price-list" */ '../views/PriceList.vue')
+  },
+  {
+    path: '/documents',
+    name: 'Documents',
+    component: () => import(/* webpackChunkName: "documents" */ '../views/Documents.vue')
+  },
 ];
 
 const router = new VueRouter({
