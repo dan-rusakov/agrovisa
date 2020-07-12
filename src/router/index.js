@@ -25,6 +25,11 @@ Vue.use(VueRouter);
     name: 'Dealers',
     component: () => import(/* webpackChunkName: "dealers" */ '../views/Dealers.vue')
   },
+    {
+      path: '/price-list',
+      name: 'PriceList',
+      component: () => import(/* webpackChunkName: "price-list" */ '../views/PriceList.vue')
+    },
 ];
 
 const router = new VueRouter({
