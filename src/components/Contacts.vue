@@ -5,15 +5,15 @@
       <div class="contacts__form-box">
         <div class="contacts__form-text-box">
           <p class="contacts__form-mark">Адрес</p>
-          <p class="contacts__form-text">445000, г. Тольятти, ул. Юбилейная, 19</p>
+          <p class="contacts__form-text">445140, г. Тольятти, ул. Коммунальная, 7</p>
         </div>
         <div class="contacts__form-text-box">
           <p class="contacts__form-mark">Телефон</p>
-          <p class="contacts__form-text">+7-(8482)-11-11-11</p>
+          <p class="contacts__form-text">8 (800) 555-28-26</p>
         </div>
         <div class="contacts__form-text-box">
           <p class="contacts__form-mark">Email</p>
-          <p class="contacts__form-text">mail@agrovisa.ru</p>
+          <p class="contacts__form-text">info@agrovisa.ru</p>
         </div>
         <form action="/" method="post" class="contacts__form">
           <input type="text" class="contacts__input" placeholder="Имя">

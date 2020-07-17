@@ -5,19 +5,19 @@
         <div class="swiper-slide">
           <div class="welcome-screen__slide"
                :style="{backgroundImage: `url(${require('@/assets/images/welcome-screen-img1.jpg')})`}">
-            <p class="welcome-screen__slide-title">Закупка и экспорт сельскохозяйственной продукции</p>
+            <p class="welcome-screen__slide-title">Закупка и продажа сельскохозяйственной продукции</p>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="welcome-screen__slide"
                :style="{backgroundImage: `url(${require('@/assets/images/welcome-screen-img1.jpg')})`}">
-            <p class="welcome-screen__slide-title">Закупка и экспорт сельскохозяйственной продукции</p>
+            <p class="welcome-screen__slide-title">Экспорт сельскохозяйственной продукции</p>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="welcome-screen__slide"
                :style="{backgroundImage: `url(${require('@/assets/images/welcome-screen-img1.jpg')})`}">
-            <p class="welcome-screen__slide-title">Закупка и экспорт сельскохозяйственной продукции</p>
+            <p class="welcome-screen__slide-title">Перевозки сельскохозяйственной продукции</p>
           </div>
         </div>
       </div>

@@ -4,16 +4,24 @@
       <div class="logistics-page__wrapper">
         <h1 class="logistics-page__title">Логистика</h1>
         <div class="logistics-page__description-box">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget venenatis risus. Maecenas malesuada nulla in urna porttitor, eget auctor quam efficitur. Praesent id est turpis. Suspendisse pretium libero fermentum ultricies sodales. Nam ut nisi pharetra, fringilla elit sed, vulputate nisi. Sed tempus, sem vel tincidunt dignissim, turpis risus iaculis ex.</p>
-          <h3>Lorem ipsum dolor </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget venenatis risus. Maecenas malesuada nulla in urna porttitor, eget auctor quam efficitur.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget venenatis risus. Maecenas malesuada nulla in urna porttitor, eget auctor quam efficitur. Praesent id est turpis. Suspendisse pretium.</p>
-          <h3>Sed tempus sem vel risus ex</h3>
+          <p>АГРОВИЗА – молодая и стремительно развивающаяся российская компания. Основное направление нашей деятельности связано с закупкой и продажей сельскохозяйственной продукции на внутреннем рынке России и экспортом в страны ближнего и дальнего зарубежья.</p>
+          <p>В партнёрскую инфраструктуру компании входят такие производственно-логистические комплексы, как линейные и портовые элеваторы на малой воде, транспортные операторы, таможенные брокеры и другие специализированные подразделения, что позволяет оперативно и в полном объеме сопровождать все наши поставки. </p>
+          <p>Кроме этого, АГРОВИЗА также осуществляет перевозки сельскохозяйственной продукции собственным парком автомобильного транспорта, который доставит груз по назначению в полной сохранности и точно в срок.</p>
+          <h3>ПЯТЬ ПРЕИМУЩЕСТВ НАШИХ ПЕРЕВОЗОК:</h3>
           <ol>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            <li>Praesent id est turpis</li>
-            <li>Maecenas malesuada nulla in urna porttitor</li>
+            <li>Оптимальные гибкие условия поставок сельскохозяйственных культур</li>
+            <li>Наработанные логистические схемы использования наземного, речного и морского транспорта</li>
+            <li>Строгое соблюдение договорных обязательств, особенно в пунктах, касающихся сроков и условий поставки</li>
+            <li>Постоянное документальное и информационное сопровождение всех наших поставок и оперативное взаимодействие с покупателем.</li>
+            <li>Лояльные цены на продукцию на условиях FOB</li>
           </ol>
+          <p><b>Если вам необходимо перевезти сельскохозяйственную продукцию не беспокоясь о срывах сроков и безопасности перевозки – мы всегда готовы порадовать вас чётко организованной поставкой!</b></p>
+          <p>Также, АГРОВИЗА всегда открыта для любых предложений о поставках и партнёрстве. Мы готовы заключать договора на перевозку наземным, речным и морским транспортом на следующих условиях:</p>
+          <p><a href="#!">Коммерческое предложение с расценками на перевозку с/х продукции (для Т/Х до 3000 тн) </a></p>
+          <p><a href="#!">Коммерческое предложение с расценками на перевозку с/х продукции (для Т/Х свыше 3000 тн) </a></p>
+          <h3>В СЛУЧАЕ ВАШЕЙ ЗАИНТЕРЕСОВАННОСТИ, ПРОСИМ ОБРАЩАТЬСЯ:</h3>
+          <p>8 (800) 555-28-26</p>
+          <p>Павлова Ольга, 8 (917) 126-08-88, logist@agrovisa.ru</p>
         </div>
       </div>
     </section>

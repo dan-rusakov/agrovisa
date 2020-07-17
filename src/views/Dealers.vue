@@ -4,14 +4,12 @@
       <div class="dealers__wrapper">
         <h1 class="dealers__title">Поставщикам</h1>
         <div class="dealers__text-box">
-          <h3>Sed tempus sem vel risus ex</h3>
+          <h3>СХЕМА ВЗАИМОДЕЙСТВИЯ С ПОСТАВЩИКАМИ ООО «АГРОВИЗА»</h3>
           <ol>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit  dolor sit</li>
-            <li>Praesent id est turpis</li>
-            <li>Maecenas malesuada nulla in urna porttitor</li>
-            <li>Lorem ipsum dolor sit amet, consectetur <a href="#!">Документы</a></li>
-            <li>Praesent id est turpis</li>
-            <li>Maecenas malesuada nulla in urna porttitor</li>
+            <li>Свяжитесь с нами <router-link :to="{name: 'Home', hash: '#contacts'}" @click.native="scrollFix('#contacts')" tag="a">любым удобным для вас способом</router-link></li>
+            <li>Получите образцы документов для оформления договора, ТТН и Анкету поставщика в разделе <router-link :to="{name: 'Documents'}" tag="a">Документы.</router-link></li>
+            <li>С текущими ценами можно ознакомиться в разделе <router-link :to="{name: 'PriceList'}" tag="a">прайс-лист</router-link></li>
+            <li>Наши менеджеры оперативно свяжутся с вами по поводу поставки сельскохозяйственной продукции.</li>
           </ol>
         </div>
         <div class="dealers__gallery">
@@ -57,6 +55,11 @@
 
   export default {
     name: 'Dealers',
+    methods: {
+      scrollFix(hashbang) {
+        location.href = hashbang;
+      }
+    },
     mounted() {
       new Swiper(this.$el.querySelector('.swiper-container'), {
         loop: false,
