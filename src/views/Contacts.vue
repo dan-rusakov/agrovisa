@@ -18,7 +18,7 @@
                   :show-labels="false"
                   placeholder="Регион"
                   label="name"
-                  class="price-list__multiselect"
+                  class="price-list__multiselect contacts-page__multiselect"
               >
                 <template slot="option" slot-scope="props">
                   <span class="price-list__checkbox"></span>
@@ -91,7 +91,6 @@
 <script>
   import axios from "axios";
   import Multiselect from 'vue-multiselect';
-  import 'vue-multiselect/dist/vue-multiselect.min.css';
 
   export default {
     name: 'Contacts',
@@ -197,166 +196,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .contacts-page {
-    background-color: $white;
-    padding: 80px 0 110px;
-  }
-
-  .contacts-page__wrapper {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contacts-page__title {
-    font-family: $font-family-base;
-    font-size: 52px;
-    font-weight: $bold;
-    color: $text-color;
-    margin: 0 0 50px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .contacts-page__description {
-    font-family: $font-family-base;
-    font-weight: $medium;
-    font-size: 18px;
-    color: $text-color;
-    margin: 0 0 80px;
-    max-width: 830px;
-  }
-
-  .contacts-page__content-box {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr max-content;
-    grid-column-gap: 100px;
-  }
-
-  .contacts-page__map-box {
-    width: 100%;
-  }
-
-  .contacts-page__text-box {
-    width: 380px;
-  }
-
-  .price-list__multiselect {
-    width: 230px;
-    margin-right: 30px;
-    font-family: $font-family-base;
-    font-size: 14px;
-    font-weight: $semibold;
-    color: $text-color;
-    cursor: pointer;
-    min-height: 38px;
-    margin-bottom: 30px;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    .multiselect__tags {
-      border: 2px solid #e5e5e5;
-      border-radius: 8px;
-      min-height: 38px;
-      padding: 9px 40px 0 18px;
-    }
-
-    .multiselect__placeholder {
-      padding: 0;
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.3;
-    }
-
-    .multiselect__single {
-      margin: 0;
-      padding: 0;
-      font-size: 14px;
-      line-height: 1.3;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .multiselect__select {
-      height: 36px;
-    }
-
-    &.multiselect--active:not(.multiselect--above) .multiselect__current,
-    &.multiselect--active:not(.multiselect--above) .multiselect__input,
-    &.multiselect--active:not(.multiselect--above) .multiselect__tags {
-      border-radius: 8px;
-    }
-
-    .multiselect__option {
-      background-color: #F6F6F6;
-      border: none;
-      color: $text-color;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 11px 18px;
-      font-family: $font-family-base;
-      font-weight: $medium;
-      max-width: 230px;
-
-      &--selected {
-        .price-list__checkbox::before {
-          opacity: 1;
-        }
-      }
-
-      &--highlight {
-        background-color: #E5E5E5;
-      }
-    }
-
-    .multiselect__content-wrapper {
-      border: none;
-    }
-
-    .price-list__checkbox {
-      display: block;
-      width: 16px;
-      height: 16px;
-      border: 1px solid $gray;
-      border-radius: 4px;
-      flex-shrink: 0;
-      margin-right: 15px;
-      position: relative;
-
-      &::before {
-        content: '';
-        width: 8px;
-        height: 8px;
-        border-radius: 2px;
-        background-color: $brand-color;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        opacity: 0;
-        transition: .25s opacity ease;
-      }
-    }
-
-    .price-list__option-text {
-      text-align: right;
-      flex-grow: 1;
-      white-space: normal;
-    }
-  }
-
-  .contacts-page__region-contacts-box {
-    border-bottom: 2px solid #C4C4C4;
-    margin-bottom: 35px;
-    padding-bottom: 15px;
-  }
-</style>

@@ -97,7 +97,6 @@
 
 <script>
   import Swiper from 'swiper';
-  import 'swiper/css/swiper.css';
 
   export default {
     name: 'Products',
@@ -114,67 +113,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .products {
-    background-color: $white;
-    padding: 100px 0;
-  }
-
-  .products__wrapper {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .products__title {
-    width: 100%;
-    text-align: center;
-    font-family: $font-family-base;
-    font-size: 34px;
-    font-weight: $semibold;
-    color: $text-color;
-    margin: 0 0 40px;
-  }
-
-  .products__gallery {
-    width: 100%;
-    position: relative;
-    padding: 0 70px;
-  }
-
-  .product-card__img-box {
-    width: 100%;
-    padding-bottom: 100%;
-    position: relative;
-    border-radius: 1000px;
-    overflow: hidden;
-    display: block;
-  }
-
-  .product-card__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .product-card__name {
-    font-family: $font-family-base;
-    font-weight: $semibold;
-    color: $text-color;
-    font-size: 22px;
-    margin: 20px 0 0;
-    text-align: center;
-
-    &--small {
-      font-size: 18px;
-      margin: 13px 0 0;
-    }
-  }
-</style>

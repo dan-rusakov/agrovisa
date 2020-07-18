@@ -1,0 +1,118 @@
+.contacts {
+  position: relative;
+  height: 65vh;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contacts__form-box {
+  width: 430px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(47, 47, 47, 0.15);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: $white;
+  padding: 25px;
+  pointer-events: all;
+}
+
+.contacts__wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  pointer-events: none;
+}
+
+.contacts__form-text-box {
+  margin-bottom: 20px;
+}
+
+.contacts__form-mark {
+  font-family: $font-family-base;
+  font-weight: $semibold;
+  font-size: 14px;
+  color: $gray;
+  margin: 0 0 2px;
+}
+
+.contacts__form-text {
+  font-family: $font-family-base;
+  font-weight: $semibold;
+  font-size: 18px;
+  color: $text-color;
+  margin: 0;
+}
+
+.contacts__input {
+  width: 100%;
+  padding: 7px 12px;
+  border: 2px solid #C4C4C4;
+  border-radius: 6px;
+  font-family: $font-family-base;
+  font-size: 14px;
+  color: $text-color;
+  margin-bottom: 20px;
+  outline: none;
+  transition: .25s border-color ease;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:hover, &:focus {
+    border-color: $brand-color;
+  }
+}
+
+.contacts__textarea {
+  width: 100%;
+  padding: 7px 12px;
+  border: 2px solid #C4C4C4;
+  border-radius: 6px;
+  font-family: $font-family-base;
+  font-size: 14px;
+  color: $text-color;
+  margin-bottom: 20px;
+  outline: none;
+  transition: .25s border-color ease;
+  resize: none;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:hover, &:focus {
+    border-color: $brand-color;
+  }
+}
+
+.contacts__submit-btn {
+  padding: 7px 24px;
+  border: 2px solid $brand-color;
+  font-family: $font-family-base;
+  font-weight: $semibold;
+  color: $text-color;
+  border-radius: 6px;
+  background-color: $white;
+  outline: none;
+  transition: .25s background-color ease;
+
+  &:hover, &:focus {
+    background-color: $brand-color;
+  }
+}
+
+.contacts__form {
+  margin-top: 40px;
+}

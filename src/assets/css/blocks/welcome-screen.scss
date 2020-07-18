@@ -1,0 +1,38 @@
+.welcome-screen {
+  height: calc(100vh - 106px);
+}
+
+.welcome-screen__slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(360deg, rgba(47, 47, 47, 0.58) 0%, rgba(47, 47, 47, 0) 100%);
+    z-index: -1;
+  }
+}
+
+.welcome-screen__slide-title {
+  font-family: $font-family-base;
+  font-weight: $bold;
+  color: $white;
+  font-size: 62px;
+  margin: 0;
+  max-width: 700px;
+  text-align: center;
+  line-height: 1.2;
+}

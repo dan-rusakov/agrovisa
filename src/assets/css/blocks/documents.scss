@@ -1,0 +1,32 @@
+.documents {
+  background-color: $white;
+  padding: 80px 0 110px;
+}
+
+.documents__wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.documents__title {
+  font-family: $font-family-base;
+  font-size: 52px;
+  font-weight: $bold;
+  color: $text-color;
+  margin: 0 0 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.documents__list {
+  display: grid;
+  grid-template-columns: repeat(5, 190px);
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  grid-row-gap: 30px;
+}
