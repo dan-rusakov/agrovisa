@@ -15,11 +15,30 @@
           <p class="contacts__form-mark">Email</p>
           <p class="contacts__form-text">info@agrovisa.ru</p>
         </div>
-        <form action="/" method="post" class="contacts__form">
-          <input type="text" class="contacts__input" placeholder="Имя">
-          <input type="text" class="contacts__input" placeholder="Телефон/Email">
-          <textarea name="message" class="contacts__textarea" placeholder="Сообщение"></textarea>
-          <button type="submit" class="contacts__submit-btn">Отправить</button>
+        <form action="/send-email" method="post" class="contacts__form" @submit.prevent="sendForm">
+          <input
+              type="text"
+              class="contacts__input"
+              placeholder="Имя"
+              name="name"
+              v-model="name"
+              required
+          >
+          <input
+              type="text"
+              class="contacts__input"
+              placeholder="Телефон/Email"
+              name="phone-email"
+              required
+              v-model="phoneEmail"
+          >
+          <textarea
+              class="contacts__textarea"
+              placeholder="Сообщение"
+              name="message"
+              v-model="message"
+          ></textarea>
+          <button type="submit" class="contacts__submit-btn">{{ btnText }}</button>
         </form>
       </div>
     </div>
@@ -27,8 +46,46 @@
 </template>
 
 <script>
+  import axios from 'axios';
+
   export default {
     name: 'Contacts',
+    data() {
+      return {
+        name: null,
+        phoneEmail: null,
+        message: null,
+        formSent: false,
+      }
+    },
+    methods: {
+      sendForm() {
+        axios.post('/send-email', {
+          name: this.name,
+          phoneEmail: this.phoneEmail,
+          message: this.message,
+        })
+          .then(() => {
+            this.formSent = true;
+            this.name = null;
+            this.phoneEmail = null;
+            this.message = null;
+          })
+          .catch(error => {
+            if (!error.response) {
+              alert('Ошибка сети. Проверьте ваше подключение к интернету.');
+              console.log(error)
+            } else {
+              alert(error.response.data.message || error.message);
+            }
+          });
+      }
+    },
+    computed: {
+      btnText() {
+        return this.formSent ? 'Отправлено' : 'Отправить';
+      }
+    }
   }
 </script>
 
