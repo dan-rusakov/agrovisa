@@ -35,6 +35,11 @@ Vue.use(VueRouter);
     name: 'Documents',
     component: () => import(/* webpackChunkName: "documents" */ '../views/Documents.vue')
   },
+  {
+    path: '/contacts',
+    name: 'Contacts',
+    component: () => import(/* webpackChunkName: "contacts" */ '../views/Contacts.vue')
+  },
 ];
 
 const router = new VueRouter({

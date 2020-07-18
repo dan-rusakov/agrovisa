@@ -40,7 +40,7 @@
                   <router-link :to="{name: 'Dealers'}" class="header__menu-link" tag="a">Поставщикам</router-link>
                 </li>
                 <li class="header__menu-item">
-                  <router-link :to="{name: 'Home', hash: '#contacts'}" @click.native="scrollFix('#contacts')" class="header__menu-link" tag="a">Контакты</router-link>
+                  <router-link :to="{name: 'Contacts'}" class="header__menu-link" tag="a">Контакты</router-link>
                 </li>
               </ul>
             </div>
