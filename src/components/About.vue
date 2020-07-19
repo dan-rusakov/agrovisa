@@ -19,43 +19,6 @@
           В партнёрскую инфраструктуру <b>АГРОВИЗА</b> входят такие производственно-логистические комплексы, как линейные и портовые элеваторы на малой воде, транспортные операторы, таможенные брокеры и другие специализированные подразделения, что позволяет оперативно и в полном объеме сопровождать все наши поставки.
         </p>
       </div>
-      <div class="about__gallery-box">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <article class="person-card">
-                <picture class="person-card__img-box">
-                  <img src="@/assets/images/person-card-img.jpg" alt="" class="person-card__img">
-                </picture>
-                <p class="person-card__post">Должность</p>
-                <strong class="person-card__name">Фамилия Имя Отчество</strong>
-                <p class="person-card__description">Тел./факс: +7-(8482)-11-11-11</p>
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <article class="person-card">
-                <picture class="person-card__img-box">
-                  <img src="@/assets/images/person-card-img.jpg" alt="" class="person-card__img">
-                </picture>
-                <p class="person-card__post">Должность</p>
-                <strong class="person-card__name">Фамилия Имя Отчество</strong>
-                <p class="person-card__description">Тел./факс: +7-(8482)-11-11-11</p>
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <article class="person-card">
-                <picture class="person-card__img-box">
-                  <img src="@/assets/images/person-card-img.jpg" alt="" class="person-card__img">
-                </picture>
-                <p class="person-card__post">Должность</p>
-                <strong class="person-card__name">Фамилия Имя Отчество</strong>
-                <p class="person-card__description">Тел./факс: +7-(8482)-11-11-11</p>
-              </article>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
     </div>
   </section>
 </template>

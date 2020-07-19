@@ -12,7 +12,7 @@
             <div class="contacts-page__region-contacts-box">
               <multiselect
                   v-model="selectedRegion"
-                  :options="regions"
+                  :options="sortedRegions"
                   :searchable="false"
                   :close-on-select="true"
                   :show-labels="false"
@@ -120,6 +120,26 @@
             name: 'Республика Башкирия',
             slug: 'respublika_bashkirija',
           },
+          {
+            name: 'Саратовская область',
+            slug: 'saratovskaja_oblast',
+          },
+          {
+            name: 'Тамбовская область',
+            slug: 'tambovskaja_oblast',
+          },
+          {
+            name: 'Ульяновская область',
+            slug: 'uljanovskaja_oblast',
+          },
+          {
+            name: 'Пензенская область',
+            slug: 'penzenskaja_oblast',
+          },
+          {
+            name: 'Республика Мордовия',
+            slug: 'respublika_mordovija',
+          },
         ],
         selectedRegion: null,
         baseContacts: {
@@ -132,25 +152,24 @@
             name: 'Дмитрий',
             phone: '+7 939 714-55-55',
             email: 'd.kiselev@agrovisa.ru',
-            region: 'samarskaya_oblast',
+            regions: [
+              'samarskaya_oblast',
+              'orenburgskaja_oblast',
+              'respublika_tatarstan',
+              'respublika_bashkirija',
+            ]
           },
           {
             name: 'Данила',
             phone: '+7 937 208-55-55',
             email: 'd.zoteev@agrovisa.ru',
-            region: 'orenburgskaja_oblast',
-          },
-          {
-            name: 'Кирилл',
-            phone: '+7 989 702-07-87',
-            email: 'k.reukov@agrovisa.ru',
-            region: 'respublika_tatarstan',
-          },
-          {
-            name: 'Владислав',
-            phone: '+7 918 535-49-00',
-            email: 'v.prokudin@agrovisa.ru',
-            region: 'respublika_bashkirija',
+            regions: [
+              'saratovskaja_oblast',
+              'tambovskaja_oblast',
+              'uljanovskaja_oblast',
+              'penzenskaja_oblast',
+              'respublika_mordovija',
+            ]
           },
         ]
       }
@@ -183,7 +202,7 @@
         let newManager = null;
 
         this.managers.forEach(manager => {
-          if (manager.region === this.selectedRegion.slug) {
+          if (manager.regions.includes(this.selectedRegion.slug)) {
             newManager = manager;
           }
         });
@@ -192,6 +211,24 @@
       },
       btnText() {
         return this.formSent ? 'Отправлено' : 'Отправить';
+      },
+      sortedRegions() {
+        const newRegions = JSON.parse(JSON.stringify(this.regions));
+
+        return newRegions.sort(function(a, b) {
+          const regionA = a.name.toLowerCase();
+          const regionB = b.name.toLowerCase();
+
+          if (regionA < regionB) {
+            return -1;
+          }
+
+          if (regionA > regionB) {
+            return 1;
+          }
+
+          return 0;
+        })
       }
     }
   }

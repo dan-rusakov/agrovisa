@@ -4,7 +4,7 @@
       <nav class="header__wrapper">
         <div class="header__content-box">
           <div class="header__top-line">
-            <a href="tel:+79111111111" class="header__phone">+7 (911) 111-11-11</a>
+            <a href="tel:+79111111111" class="header__phone">8 (800) 555-28-26</a>
           </div>
           <div class="header__bottom-line">
             <ul class="header__menu">
@@ -28,7 +28,6 @@
         <div class="header__content-box">
           <div class="header__content-box">
             <div class="header__top-line">
-              <button type="button" class="header__popup-btn">Вход</button>
               <button type="button" class="header__popup-btn">Заказать звонок</button>
             </div>
             <div class="header__bottom-line">
