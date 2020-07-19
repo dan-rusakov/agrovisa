@@ -140,6 +140,30 @@
             name: 'Республика Мордовия',
             slug: 'respublika_mordovija',
           },
+          {
+            name: 'Курская область',
+            slug: 'kurskaja_oblast',
+          },
+          {
+            name: 'Орловская область',
+            slug: 'orlovskaja_oblast',
+          },
+          {
+            name: 'Липецкая область',
+            slug: 'lipeckaja_oblast',
+          },
+          {
+            name: 'Воронежская область',
+            slug: 'voronezhskaja_oblast',
+          },
+          {
+            name: 'Волгоградская область',
+            slug: 'volgogradskaja_oblast',
+          },
+          {
+            name: 'Белгородская область',
+            slug: 'belgorodskaja_oblast',
+          },
         ],
         selectedRegion: null,
         baseContacts: {
@@ -169,6 +193,26 @@
               'uljanovskaja_oblast',
               'penzenskaja_oblast',
               'respublika_mordovija',
+            ]
+          },
+          {
+            name: 'Владислав',
+            phone: '+7 918 535-49-00',
+            email: 'v.prokudin@agrovisa.ru',
+            regions: [
+              'kurskaja_oblast',
+              'orlovskaja_oblast',
+              'lipeckaja_oblast',
+            ]
+          },
+          {
+            name: 'Кирилл',
+            phone: '+7 989 702-07-87',
+            email: 'k.reukov@agrovisa.ru',
+            regions: [
+              'voronezhskaja_oblast',
+              'volgogradskaja_oblast',
+              'belgorodskaja_oblast',
             ]
           },
         ]
