@@ -60,7 +60,7 @@
               <p class="price-list__company-description">8 (800) 555-28-26</p>
             </div>
             <div class="price-list__company-right-box">
-              <button class="price-list__contact-btn">Связаться с нами</button>
+              <button class="price-list__contact-btn" @click="openCallbackPopup = true">Связаться с нами</button>
             </div>
           </div>
           <table class="price-list__result-table">
@@ -81,19 +81,23 @@
         </div>
       </div>
     </section>
+    <CallbackPopup :opened="openCallbackPopup" @close-popup="openCallbackPopup = false"/>
   </div>
 </template>
 
 <script>
   import Multiselect from 'vue-multiselect'
+  import CallbackPopup from '../components/CallbackPopup';
 
   export default {
     name: 'PriceList',
     components: {
       Multiselect,
+      CallbackPopup,
     },
     data() {
       return {
+        openCallbackPopup: false,
         regions: [
           {
             name: 'Самарская область',

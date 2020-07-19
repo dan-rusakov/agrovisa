@@ -28,7 +28,7 @@
         <div class="header__content-box">
           <div class="header__content-box">
             <div class="header__top-line">
-              <button type="button" class="header__popup-btn">Заказать звонок</button>
+              <button type="button" class="header__popup-btn" @click="openCallbackPopup = true">Заказать звонок</button>
             </div>
             <div class="header__bottom-line">
               <ul class="header__menu">
@@ -59,12 +59,23 @@
         </div>
       </div>
     </footer>
+    <CallbackPopup :opened="openCallbackPopup" @close-popup="openCallbackPopup = false"/>
   </div>
 </template>
 
 <script>
+  import CallbackPopup from './components/CallbackPopup';
+
   export default {
     name: 'App',
+    components: {
+      CallbackPopup,
+    },
+    data() {
+      return {
+        openCallbackPopup: false,
+      }
+    },
     methods: {
       scrollFix(hashbang) {
         location.href = hashbang;
