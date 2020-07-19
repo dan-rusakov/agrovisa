@@ -30,8 +30,9 @@
     },
     methods: {
       closePopup(evt) {
-        if (!evt.target.closest('.callback-popup')) {
+        if (!evt.target.closest('.callback-popup') || evt.key === 'Escape') {
           this.$emit('close-popup');
+          document.removeEventListener('keyup', this.closePopup);
         }
       },
       sendForm() {
@@ -63,12 +64,14 @@
           disableBodyScroll(this.$refs.popup, {
             reserveScrollBarGap: true,
           });
+
+          document.addEventListener('keyup', this.closePopup);
         } else {
           setTimeout(() => {
             enableBodyScroll(this.$refs.popup, {
               reserveScrollBarGap: true,
             });
-          });
+          }, 350);
         }
       }
     }

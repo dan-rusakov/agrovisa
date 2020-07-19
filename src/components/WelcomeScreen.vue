@@ -39,6 +39,10 @@
           el: this.$el.querySelector('.swiper-pagination'),
           clickable: true,
         },
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+        },
       })
     }
   }

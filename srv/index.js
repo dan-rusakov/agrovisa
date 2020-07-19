@@ -7,8 +7,6 @@ export default (app, http) => {
 
   app.post('/send-email', async(req, res) => {
 
-    console.log(req.body);
-
     const transporter = nodemailer.createTransport({
       host: "smtp.yandex.ru",
       port: 465,
