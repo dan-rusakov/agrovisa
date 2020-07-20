@@ -13,7 +13,7 @@ export default (app, http) => {
       secure: true,
       auth: {
         user: 'danil17051998@yandex.ru',
-        pass: 'gatzyotmvpypthcr'
+        pass: process.env.VUE_APP_EMAIL_SECRET,
       }
     });
 
