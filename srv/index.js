@@ -12,7 +12,7 @@ export default (app, http) => {
       port: 465,
       secure: true,
       auth: {
-        user: 'danil17051998@yandex.ru',
+        user: process.env.VUE_APP_EMAIL,
         pass: process.env.VUE_APP_EMAIL_SECRET,
       }
     });
@@ -24,8 +24,8 @@ export default (app, http) => {
     });
 
     const mailOptions = {
-      from: 'danil17051998@yandex.ru',
-      to: 'danil17051998@yandex.ru',
+      from: process.env.VUE_APP_EMAIL,
+      to: process.env.VUE_APP_EMAIL,
       subject: 'Заявка с сайта Агровиза',
       html: data,
     };
