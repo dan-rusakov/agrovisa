@@ -165,7 +165,7 @@
   font-size: 14px;
   font-weight: $semibold;
   color: $text-color;
-  margin: 6px 0 0;
+  margin: 12px 0 0;
 }
 
 .price-list__multiselect {
@@ -272,4 +272,30 @@
     flex-grow: 1;
     white-space: normal;
   }
+}
+
+.price-list__table-regions {
+  margin-top: 8px;
+}
+
+.price-list__table-region {
+  display: inline-block;
+  font-family: $font-family-base;
+  font-size: 14px;
+  font-weight: $semibold;
+  color: $gray;
+  margin: 6px 12px 0 0;
+}
+
+.price-list__table-elevators {
+  margin-top: 8px;
+}
+
+.price-list__table-elevator {
+  display: inline-block;
+  font-family: $font-family-base;
+  font-size: 14px;
+  font-weight: $medium;
+  color: $text-color;
+  margin: 6px 12px 0 0;
 }
