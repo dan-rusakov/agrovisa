@@ -22,7 +22,7 @@
         </div>
         <div class="header__content-box">
           <router-link :to="{name: 'Home'}" class="header__logo-box" tag="a">
-            <img src="./assets/images/logo.png" alt="Агровиза" class="header__logo">
+            <img src="./assets/images/logo.svg" alt="Агровиза" class="header__logo">
           </router-link>
         </div>
         <div class="header__content-box">
@@ -51,7 +51,7 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <a href="#!" class="footer__logo-box">
-          <img src="./assets/images/logo.png" alt="Агровиза" class="footer__img">
+          <img src="./assets/images/logo.svg" alt="Агровиза" class="footer__img">
         </a>
         <div class="footer__text-box">
           <p class="footer__text">Вся информация на сайте носит справочный характер и не является публичной офертой, определяемой статьей 437 ГК РФ</p>
