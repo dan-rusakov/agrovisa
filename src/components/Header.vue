@@ -3,7 +3,7 @@
     <nav class="header__wrapper">
       <div class="header__content-box">
         <div class="header__top-line">
-          <a href="tel:+79111111111" class="header__phone">8 (800) 555-28-26</a>
+          <a href="tel:+79111111111" class="header__phone">{{ phone }}</a>
         </div>
         <div class="header__bottom-line">
           <ul class="header__menu">
@@ -49,12 +49,24 @@
 </template>
 
 <script>
+  import api from '../api';
+
   export default {
     name: 'Header',
+    data() {
+      return {
+        phone: null,
+      };
+    },
     methods: {
       scrollFix(hashbang) {
         location.href = hashbang;
       }
-    }
+    },
+    created() {
+      api.getCurrentPage('contacts', (response) => {
+        this.phone = response[0]?.acf.main_phone;
+      });
+    },
   }
 </script>

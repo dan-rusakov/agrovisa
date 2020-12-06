@@ -39,7 +39,7 @@ function acf_load_region_select_field( $field ) {
 
             the_row();
 
-            $value = get_sub_field('region_name');
+            $value = get_sub_field('name');
             $field['choices'][ $value ] = $value;
 
         }
@@ -59,7 +59,7 @@ function acf_load_elevator_select_field( $field ) {
 
             the_row();
 
-            $value = get_sub_field('elevator_name');
+            $value = get_sub_field('name');
             $field['choices'][ $value ] = $value;
 
         }
@@ -79,7 +79,7 @@ function acf_load_product_select_field( $field ) {
 
             the_row();
 
-            $value = get_sub_field('product_name');
+            $value = get_sub_field('name');
             $field['choices'][ $value ] = $value;
 
         }
@@ -89,3 +89,12 @@ function acf_load_product_select_field( $field ) {
 }
 
 add_filter('acf/load_field/name=product_select', 'acf_load_product_select_field');
+
+// Content editor settings
+
+function remove_h1_from_editor( $settings ) {
+    $settings['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6';
+    return $settings;
+}
+
+add_filter( 'tiny_mce_before_init', 'remove_h1_from_editor' );

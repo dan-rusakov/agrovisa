@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content" v-if="acf">
     <section class="price-list">
       <div class="price-list__wrapper">
         <div class="price-list__filter">
@@ -11,12 +11,12 @@
               :close-on-select="true"
               :show-labels="false"
               placeholder="Область"
-              label="Name"
+              label="name"
               class="price-list__multiselect"
           >
             <template slot="option" slot-scope="props">
               <span class="price-list__checkbox"></span>
-              <p class="price-list__option-text">{{props.option.Name}}</p>
+              <p class="price-list__option-text">{{props.option.name}}</p>
             </template>
           </multiselect>
           <multiselect
@@ -27,12 +27,12 @@
               :close-on-select="true"
               :show-labels="false"
               placeholder="Элеватор"
-              label="Name"
+              label="name"
               class="price-list__multiselect"
           >
             <template slot="option" slot-scope="props">
               <span class="price-list__checkbox"></span>
-              <p class="price-list__option-text">{{props.option.Name}}</p>
+              <p class="price-list__option-text">{{props.option.name}}</p>
             </template>
           </multiselect>
           <multiselect
@@ -43,25 +43,19 @@
               :close-on-select="true"
               :show-labels="false"
               placeholder="С/Х культура"
-              label="Name"
+              label="name"
               class="price-list__multiselect"
           >
             <template slot="option" slot-scope="props">
               <span class="price-list__checkbox"></span>
-              <p class="price-list__option-text">{{props.option.Name}}</p>
+              <p class="price-list__option-text">{{props.option.name}}</p>
             </template>
           </multiselect>
           <button type="button" class="price-list__reset-btn" @click="resetFilter">Сбросить фильтр</button>
         </div>
         <div class="price-list__results">
           <div class="price-list__company-info">
-            <div class="price-list__company-left-box">
-              <p class="price-list__company-description">Цены (руб/т) действуют с 14.07.2020 с 00:00</p>
-              <p class="price-list__company-description">Базис поставки - СРТ</p>
-              <p class="price-list__company-description">Ждем Ваших звонков:</p>
-              <p class="price-list__company-description">тел. +7 939 714-55-55 (Дмитрий)</p>
-              <p class="price-list__company-description">8 (800) 555-28-26</p>
-            </div>
+            <div class="price-list__company-left-box" v-html="acf.page_description" />
             <div class="price-list__company-right-box">
               <button class="price-list__contact-btn" @click="openCallbackPopup = true">Связаться с нами</button>
             </div>
@@ -74,17 +68,25 @@
             </tr>
             <tr v-for="product in filteredProducts" :key="product.id">
               <td>
-                <p class="price-list__table-title">{{ product.product.Name }}</p>
-                <p class="price-list__table-text" v-show="product.product.Description">{{ product.product.Description }}</p>
+                <p class="price-list__table-title">{{ product.product_select }}</p>
+                <p class="price-list__table-text" v-show="product.description">{{ product.description }}</p>
                 <div class="price-list__table-regions">
-                  <p class="price-list__table-region" v-for="region in product.regions" :key="region.id">{{ region.Name }}</p>
+                  <p
+                      class="price-list__table-region"
+                      v-for="(region, index) in product.region_select"
+                      :key="index"
+                  >{{ region }}</p>
                 </div>
                 <div class="price-list__table-elevators">
-                  <p class="price-list__table-elevator" v-for="elevator in product.elevators" :key="elevator.id">{{ elevator.Name }}</p>
+                  <p
+                      class="price-list__table-elevator"
+                      v-for="(elevator, index) in product.elevator_select"
+                      :key="index"
+                  >{{ elevator }}</p>
                 </div>
               </td>
-              <td>{{ product.Price | formattedPrice }}</td>
-              <td>{{ product.PriceVAT | formattedPrice }}</td>
+              <td>{{ product.price | formattedPrice }}</td>
+              <td>{{ product.price_vat | formattedPrice }}</td>
             </tr>
           </table>
         </div>
@@ -97,7 +99,7 @@
 <script>
   import Multiselect from 'vue-multiselect'
   import CallbackPopup from '../components/CallbackPopup'
-  import axios from 'axios'
+  import api from '../api';
 
   export default {
     name: 'PriceList',
@@ -115,6 +117,7 @@
         productsFilter: null,
         selectedProduct: null,
         products: null,
+        acf: null,
       }
     },
     methods: {
@@ -129,25 +132,27 @@
         let productsList = this.products;
 
         if (this.selectedRegion) {
-          productsList = productsList.filter(item => item.regions.some(region => region.id === this.selectedRegion.id));
+          productsList = productsList.filter(item => item.region_select.some(region => region === this.selectedRegion.name));
         }
 
         if (this.selectedElevator) {
-          productsList = productsList.filter(item => item.elevators.some(elevator => elevator.id === this.selectedElevator.id));
+          productsList = productsList.filter(item => item.elevator_select.some(elevator => elevator === this.selectedElevator.name));
         }
 
         if (this.selectedProduct) {
-          productsList = productsList.filter(item => item.product.product_type === this.selectedProduct.id);
+          productsList = productsList.filter(item => item.product_select === this.selectedProduct.name);
         }
 
         return productsList;
       },
       sortedRegions() {
+        if (!this.regions) return 0;
+
         const newRegions = JSON.parse(JSON.stringify(this.regions));
 
         return newRegions.sort(function(a, b) {
-          const regionA = a.Name.toLowerCase();
-          const regionB = b.Name.toLowerCase();
+          const regionA = a.name.toLowerCase();
+          const regionB = b.name.toLowerCase();
 
           if (regionA < regionB) {
             return -1;
@@ -161,11 +166,13 @@
         })
       },
       sortedElevators() {
+        if (!this.elevators) return 0;
+
         const newElevators = JSON.parse(JSON.stringify(this.elevators));
 
         return newElevators.sort(function(a, b) {
-          const elevatorA = a.Name.toLowerCase();
-          const elevatorB = b.Name.toLowerCase();
+          const elevatorA = a.name.toLowerCase();
+          const elevatorB = b.name.toLowerCase();
 
           if (elevatorA < elevatorB) {
             return -1;
@@ -184,42 +191,14 @@
         return value ? value.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1.') + ' р/т' : '-';
       }
     },
-    beforeCreate() {
-      axios.get('http://localhost:3001/api/price-lists')
-        .then(response => {
-          this.products = response.data;
-        })
-        .catch(error => {
-          this.products = [];
-          console.log(error);
-        });
-
-      axios.get('http://localhost:3001/api/regions')
-        .then(response => {
-          this.regions = response.data;
-        })
-        .catch(error => {
-          this.regions = [];
-          console.log(error);
-        });
-
-      axios.get('http://localhost:3001/api/elevators')
-        .then(response => {
-          this.elevators = response.data;
-        })
-        .catch(error => {
-          this.elevators = [];
-          console.log(error);
-        });
-
-      axios.get('http://localhost:3001/api/product-types')
-        .then(response => {
-          this.productsFilter = response.data;
-        })
-        .catch(error => {
-          this.productsFilter = [];
-          console.log(error);
-        });
-    }
+    created() {
+      api.getCurrentPage('price-list', (response) => {
+        this.acf = response[0]?.acf;
+        this.regions = this.acf.regions;
+        this.elevators = this.acf.elevators;
+        this.productsFilter = this.acf.products;
+        this.products = this.acf.price_list;
+      });
+    },
   }
 </script>

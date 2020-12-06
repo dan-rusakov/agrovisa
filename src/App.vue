@@ -2,10 +2,6 @@
   <div id="my-app" class="main-wrapper">
     <Header />
 
-    <transition name="loader-animation" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-      <progress-bar :show-loader="showLoader" :loader-style="loaderStyle" />
-    </transition>
-
     <transition name="page-transition" mode="out-in" appear>
       <router-view />
     </transition>
@@ -53,43 +49,21 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-import ProgressBar from './components/ProgressBar.vue';
 import CallbackPopup from './components/CallbackPopup';
 
 export default {
+  name: 'App',
   components: {
     Header,
     Footer,
-    ProgressBar,
-    CallbackPopup
+    CallbackPopup,
   },
   data() {
     return {
-      showLoader: true,
       openCallbackPopup: false,
     };
-  },
-  computed: {
-    ...mapGetters({
-      isLoading: 'isLoading',
-      loadingProgress: 'loadingProgress',
-    }),
-    loaderStyle() {
-      return `width: ${this.loadingProgress}%;`;
-    },
-  },
-  watch: {
-    isLoading(val) {
-      if (val === false) {
-        let self = this;
-        setTimeout(function() {
-          self.showLoader = false;
-        }, 1000);
-      }
-    },
   },
 };
 </script>

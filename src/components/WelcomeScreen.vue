@@ -2,22 +2,10 @@
   <section class="welcome-screen">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide" v-for="(slide, index) in slider" :key="index">
           <div class="welcome-screen__slide"
-               :style="{backgroundImage: `url(${require('../assets/img/welcome-screen-img1.jpg')})`}">
-            <p class="welcome-screen__slide-title">Закупка и продажа сельскохозяйственной продукции</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="welcome-screen__slide"
-               :style="{backgroundImage: `url(${require('../assets/img/welcome-screen-img2.jpg')})`}">
-            <p class="welcome-screen__slide-title">Экспорт сельскохозяйственной продукции</p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="welcome-screen__slide"
-               :style="{backgroundImage: `url(${require('../assets/img/welcome-screen-img3.jpg')})`}">
-            <p class="welcome-screen__slide-title">Перевозки сельскохозяйственной продукции</p>
+               :style="{backgroundImage: `url(${slide.background.url})`}">
+            <p class="welcome-screen__slide-title">{{ slide.title }}</p>
           </div>
         </div>
       </div>
@@ -31,6 +19,9 @@
 
   export default {
     name: 'WelcomeScreen',
+    props: {
+      slider: Array,
+    },
     mounted() {
       new Swiper(this.$el.querySelector('.swiper-container'), {
         loop: true,

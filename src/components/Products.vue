@@ -5,85 +5,12 @@
       <div class="products__gallery">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide" v-for="(product, index) in products" :key="index">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img1.jpg" alt="" class="product-card__img">
+                  <img :src="product.image.url" :alt="product.title" class="product-card__img">
                 </picture>
-                <p class="product-card__name">Пшеница</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img2.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Ячмень</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img3.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Кукуруза</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img4.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Подсолнечник</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img5.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Соя</p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img6.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Рожь</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img7.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Лен</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img8.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Рапс</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img9.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Горох</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product-card">
-                <picture class="product-card__img-box">
-                  <img src="../assets/img/products-img10.jpg" alt="" class="product-card__img">
-                </picture>
-                <p class="product-card__name">Нут</p>
+                <p class="product-card__name">{{ product.title }}</p>
               </div>
             </div>
           </div>
@@ -100,6 +27,9 @@
 
   export default {
     name: 'Products',
+    props: {
+      products: Array,
+    },
     mounted() {
       new Swiper(this.$el.querySelector('.swiper-container'), {
         loop: false,
