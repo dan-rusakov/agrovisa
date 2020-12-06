@@ -1,10 +1,10 @@
 <template>
   <div class="content">
-    <WelcomeScreen/>
-    <About/>
-    <Advantages/>
-    <Products/>
-    <Contacts/>
+    <WelcomeScreen />
+    <About />
+    <Advantages />
+    <Products />
+    <Contacts />
   </div>
 </template>
 

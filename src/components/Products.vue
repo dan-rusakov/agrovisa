@@ -8,7 +8,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img1.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img1.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Пшеница</p>
               </div>
@@ -16,7 +16,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img2.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img2.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Ячмень</p>
               </div>
@@ -24,7 +24,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img3.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img3.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Кукуруза</p>
               </div>
@@ -32,7 +32,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img4.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img4.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Подсолнечник</p>
               </div>
@@ -40,7 +40,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img5.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img5.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Соя</p>
               </div>
@@ -49,7 +49,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img6.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img6.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Рожь</p>
               </div>
@@ -57,7 +57,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img7.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img7.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Лен</p>
               </div>
@@ -65,7 +65,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img8.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img8.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Рапс</p>
               </div>
@@ -73,7 +73,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img9.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img9.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Горох</p>
               </div>
@@ -81,7 +81,7 @@
             <div class="swiper-slide">
               <div class="product-card">
                 <picture class="product-card__img-box">
-                  <img src="@/assets/images/products-img10.jpg" alt="" class="product-card__img">
+                  <img src="../assets/img/products-img10.jpg" alt="" class="product-card__img">
                 </picture>
                 <p class="product-card__name">Нут</p>
               </div>
