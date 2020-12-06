@@ -3,7 +3,7 @@
     <nav class="header__wrapper">
       <div class="header__content-box">
         <div class="header__top-line">
-          <a href="tel:+79111111111" class="header__phone">{{ phone }}</a>
+          <a :href="`tel:${formattedPhone}`" class="header__phone">{{ phone }}</a>
         </div>
         <div class="header__bottom-line">
           <ul class="header__menu">
@@ -73,6 +73,11 @@
       api.getCurrentPage('contacts', (response) => {
         this.phone = response[0]?.acf.main_phone;
       });
+    },
+    computed: {
+      formattedPhone() {
+        return this.phone ? this.phone.replace(/[ ()—-]/g, '') : '';
+      },
     },
   }
 </script>
