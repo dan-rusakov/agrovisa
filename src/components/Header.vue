@@ -45,17 +45,23 @@
         </div>
       </div>
     </nav>
+    <CallbackPopup :opened="openCallbackPopup" @close-popup="openCallbackPopup = false" />
   </header>
 </template>
 
 <script>
   import api from '../api';
+  import CallbackPopup from './CallbackPopup';
 
   export default {
     name: 'Header',
+    components: {
+      CallbackPopup,
+    },
     data() {
       return {
         phone: null,
+        openCallbackPopup: false,
       };
     },
     methods: {

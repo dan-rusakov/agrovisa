@@ -107,13 +107,14 @@
         phoneEmail: null,
         message: null,
         formSent: false,
+        feedbackAction: '/wp-json/api/feedback',
       }
     },
     methods: {
       sendForm() {
-        axios.post('/send-email', {
+        axios.post(this.feedbackAction, {
           name: this.name,
-          phoneEmail: this.phoneEmail,
+          phone_email: this.phoneEmail,
           message: this.message,
         })
           .then(() => {

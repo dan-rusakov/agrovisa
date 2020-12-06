@@ -7,7 +7,6 @@
     </transition>
 
     <Footer />
-    <CallbackPopup :opened="openCallbackPopup" @close-popup="openCallbackPopup = false" />
     <svg style="display: none;">
       <defs>
         <symbol id="icon-award" viewBox="0 0 78 78">
@@ -51,19 +50,12 @@
 <script>
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-import CallbackPopup from './components/CallbackPopup';
 
 export default {
   name: 'App',
   components: {
     Header,
     Footer,
-    CallbackPopup,
-  },
-  data() {
-    return {
-      openCallbackPopup: false,
-    };
   },
 };
 </script>

@@ -66,7 +66,7 @@
       sendForm() {
         axios.post(this.feedbackAction, {
           name: this.name,
-          phoneEmail: this.phoneEmail,
+          phone_email: this.phoneEmail,
           message: this.message,
         })
           .then(() => {

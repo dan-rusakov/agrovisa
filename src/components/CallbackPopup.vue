@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="callback-popup-wrapper" v-if="opened" @click="closePopup">
+    <div class="callback-popup-wrapper" v-show="opened" @click="closePopup">
       <div class="callback-popup" ref="popup">
         <form class="callback-popup__content" action="/send-email" method="post" @submit.prevent="sendForm">
           <h3 class="callback-popup__title">Оставьте номер телефона</h3>
@@ -26,6 +26,7 @@
       return {
         phone: null,
         formSent: false,
+        feedbackAction: '/wp-json/api/feedback-phone',
       }
     },
     methods: {
@@ -36,8 +37,8 @@
         }
       },
       sendForm() {
-        axios.post('/send-email', {
-          phoneEmail: this.phone,
+        axios.post(this.feedbackAction, {
+          phone: this.phone,
         })
           .then(() => {
             this.formSent = true;
