@@ -60,7 +60,9 @@
               <button class="price-list__contact-btn" @click="openCallbackPopup = true">Связаться с нами</button>
             </div>
           </div>
-          <table class="price-list__result-table" v-if="products">
+          <div class="price-list__result-table-wrap">
+            <div class="price-list__result-table-box">
+              <table class="price-list__result-table" v-if="products">
             <tr>
               <th>Продукция</th>
               <th>Цена</th>
@@ -89,6 +91,8 @@
               <td>{{ product.price_vat | formattedPrice }}</td>
             </tr>
           </table>
+            </div>
+          </div>
         </div>
       </div>
     </section>
