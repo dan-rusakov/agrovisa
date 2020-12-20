@@ -104,7 +104,7 @@
   position: relative;
   border: 0;
   display: none;
-  margin: auto 0;
+  margin: auto 0 auto auto;
   outline: none;
 
   &:hover,
@@ -242,6 +242,11 @@
   .header__phone {
     margin-bottom: 20px;
   }
+
+  .header__wrapper {
+    display: grid;
+    grid-template-columns: 150px max-content 150px;
+  }
 }
 
 @include tablet-md {
@@ -259,5 +264,6 @@
 
   .header__wrapper {
     padding: 0 20px;
+    grid-template-columns: 28px max-content 28px;
   }
 }
