@@ -35,4 +35,46 @@
   max-width: 700px;
   text-align: center;
   line-height: 1.2;
+  padding: 0 30px;
+}
+
+@include tablet-lg {
+  .welcome-screen {
+    height: 600px;
+  }
+
+  .welcome-screen__slide-title {
+    font-size: 52px;
+  }
+}
+
+@include tablet-md {
+  .welcome-screen {
+    height: 500px;
+  }
+
+  .welcome-screen__slide-title {
+    font-size: 44px;
+  }
+}
+
+@include tablet-sm {
+  .welcome-screen {
+    height: 400px;
+  }
+
+  .welcome-screen__slide-title {
+    font-size: 38px;
+    padding: 0 20px;
+  }
+}
+
+@include phone-lg {
+  .welcome-screen {
+    height: 320px;
+  }
+
+  .welcome-screen__slide-title {
+    font-size: 28px;
+  }
 }

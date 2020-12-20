@@ -56,12 +56,12 @@
 
 .swiper-button-prev {
   left: 0;
-  top: 56px;
+  top: calc(50% - 22px);
   margin: 0;
 }
 
 .swiper-button-next {
   right: 0;
-  top: 56px;
+  top: calc(50% - 22px);
   margin: 0;
 }

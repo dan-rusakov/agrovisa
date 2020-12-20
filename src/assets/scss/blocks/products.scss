@@ -27,3 +27,40 @@
   position: relative;
   padding: 0 70px;
 }
+
+@include tablet-lg {
+  .products {
+    padding: 80px 0;
+  }
+}
+
+@include tablet-md {
+  .products {
+    padding: 60px 0;
+  }
+
+  .products__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+@include tablet-sm {
+  .products__wrapper {
+    padding: 0 20px;
+  }
+
+  .products {
+    padding: 40px 0;
+  }
+}
+
+@include phone-lg {
+  .products__gallery {
+    padding: 0 50px;
+  }
+
+  .product-card__name {
+    font-size: 20px;
+  }
+}

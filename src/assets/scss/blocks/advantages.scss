@@ -12,3 +12,22 @@
   align-content: center;
   justify-content: space-between;
 }
+
+@include tablet-lg {
+  .advantages__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+}
+
+@include tablet-sm {
+  .advantages__wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .advantages {
+    padding: 40px 0;
+  }
+}

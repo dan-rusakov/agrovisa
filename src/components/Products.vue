@@ -39,6 +39,25 @@
           prevEl: this.$el.querySelector('.swiper-button-prev'),
           nextEl: this.$el.querySelector('.swiper-button-next'),
         },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          481: {
+            slidesPerView: 2,
+          },
+          601: {
+            slidesPerView: 3,
+          },
+          769: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+          },
+        },
       })
     }
   }
