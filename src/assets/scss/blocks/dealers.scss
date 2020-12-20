@@ -106,3 +106,56 @@
   margin: 0 0 20px;
   text-align: center;
 }
+
+@include tablet-lg {
+  .dealers {
+    padding: 80px 0;
+  }
+
+  .dealers__title {
+    margin-bottom: 40px;
+  }
+}
+
+@include tablet-md {
+  .dealers {
+    padding: 60px 0;
+  }
+
+  .dealers__title {
+    font-size: 44px;
+  }
+}
+
+@include tablet-sm {
+  .dealers__wrapper {
+    padding: 0 20px;
+  }
+
+  .dealers {
+    padding: 40px 0;
+  }
+
+  .dealers__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .dealers__text-box {
+    p {
+      font-size: 16px;
+    }
+
+    h2, h3, h4, h5, h6 {
+      font-size: 20px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    li {
+      font-size: 16px;
+    }
+  }
+}
