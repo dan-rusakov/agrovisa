@@ -6,7 +6,7 @@
         <div class="contacts-page__description" v-html="content.content.rendered"/>
         <div class="contacts-page__content-box">
           <div class="contacts-page__map-box">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A15d0ac972cf629e07d62754a74c869147baa07d44f21629b845d9e97802cedb5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+            <iframe class="contacts-page__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A15d0ac972cf629e07d62754a74c869147baa07d44f21629b845d9e97802cedb5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
           </div>
           <div class="contacts-page__text-box">
             <div class="contacts-page__region-contacts-box">
