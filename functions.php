@@ -200,3 +200,16 @@ add_action('rest_api_init', function () {
         'callback' => 'feedback_phone',
     ));
 });
+
+/* Hide menu items for manager
+----------------------------------------- */
+
+function hide_menu_items() {
+    if (!current_user_can('manage_options')) {
+        remove_menu_page('edit-comments.php');
+		remove_menu_page('edit.php');
+		remove_menu_page('tools.php');
+    }
+}
+
+add_action('admin_menu', 'hide_menu_items', 999);
