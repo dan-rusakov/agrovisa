@@ -101,7 +101,7 @@ add_filter( 'tiny_mce_before_init', 'remove_h1_from_editor' );
 
 /* Emails sending
 ----------------------------------------- */
-add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+add_filter('wp_mail_content_type', function() {return "text/html";});
 
 function feedback(WP_REST_Request $request)
 {
