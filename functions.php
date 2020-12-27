@@ -117,7 +117,7 @@ function feedback(WP_REST_Request $request)
         wp_send_json(['status' => 422, "message" => 'Не заполнен номера телефона или email'], 422);
     }
 
-    $email = 'danil17051998@yandex.ru';
+    $email = 'info@agrovisa.ru';
     $subject = 'Новая заявка с сайта';
     $message_for_user = '
         <div style="max-width: 580px; width: 100%;">
@@ -167,7 +167,7 @@ function feedback_phone(WP_REST_Request $request)
         wp_send_json(['status' => 422, "message" => 'Не заполнен номера телефона'], 422);
     }
 
-    $email = 'danil17051998@yandex.ru';
+    $email = 'info@agrovisa.ru';
     $subject = 'Новая заявка с сайта';
     $message_for_user = '
         <div style="max-width: 580px; width: 100%;">
