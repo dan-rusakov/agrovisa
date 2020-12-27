@@ -143,11 +143,7 @@ function feedback(WP_REST_Request $request)
         </div>
     ';
 
-    wp_mail(
-        $email,
-        $subject,
-        $message_for_user,
-    );
+    wp_mail($email, $subject, $message_for_user);
 
     wp_send_json(['status' => 200, 'data' => ['message' => 'Sent successfully']], 200);
 }
@@ -185,11 +181,7 @@ function feedback_phone(WP_REST_Request $request)
         </div>
     ';
 
-    wp_mail(
-        $email,
-        $subject,
-        $message_for_user,
-    );
+    wp_mail($email, $subject, $message_for_user);
 
     wp_send_json(['status' => 200, 'data' => ['message' => 'Sent successfully']], 200);
 }
